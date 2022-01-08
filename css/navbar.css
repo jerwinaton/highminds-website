@@ -1,0 +1,43 @@
+/* navbar */
+.navbar {
+  background: var(--black);
+  height: 60px;
+  width: 100vw;
+  position: fixed;
+  transition: transform 0.2s ease;
+}
+.navbar-container {
+  width: 80%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.navbar-container img {
+  width: 56px;
+  margin-right: 10px;
+}
+.navbar-container a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  font-family: NunitoSans-Black;
+}
+/* add margin auto to the right of the first  */
+/* a:link so the others is pushed to the right  */
+.navbar-container a:first-child {
+  margin-right: auto;
+  font-size: 2.5rem;
+}
+.navbar-container a:nth-child(2),
+.navbar-container a:nth-child(3) {
+  font-family: NunitoSans-Regular;
+  font-size: 1.5rem;
+  margin-inline: 5px;
+}
+
+/* hidden class for navbar on scroll */
+.hidden {
+  transform: translateY(-60px);
+}
