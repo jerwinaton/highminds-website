@@ -35,7 +35,7 @@
   font-family: NunitoSans-Regular;
   font-size: 1.5rem;
   margin-inline: 5px;
-  border: 1px solid black;
+  border: 1px solid var(--black);
   transition: border 0.3s ease;
 }
 /* add undeline on hover */

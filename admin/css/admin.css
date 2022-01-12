@@ -1,0 +1,65 @@
+body {
+  background: hsl(0, 0%, 10%);
+}
+.my-card {
+  width: 250px;
+  height: auto;
+  color: white;
+}
+.my-card-head {
+  padding: 20px;
+  background: var(--black);
+  font-family: NunitoSans-Regular, sans-serif;
+  font-weight: bold;
+}
+.my-card-container {
+  position: relative;
+}
+/* add btn on dashboard items */
+.my-card-add {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  background: var(--black);
+  border: 1px solid rgb(0, 177, 59);
+  color: white;
+  font-family: NunitoSans-Regular, sans-serif;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease, padding 0.2s ease-in-out,
+    top 0.2s ease-in-out, right 0.2s ease-in-out;
+  font-weight: bold;
+}
+.my-card-add:hover {
+  background: hsl(140, 100%, 30%);
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  right: -1px;
+}
+
+.my-card-body {
+  background: var(--silver);
+  color: var(--black);
+  font-family: "NunitoSans-Black", sans-serif;
+  padding: 40px 0;
+  text-align: center;
+  height: auto;
+}
+.my-card-body h1 {
+  margin: 0;
+}
+.my-card-footer {
+  padding: 10px 20px;
+  background: var(--black);
+  font-size: 1rem;
+}
+
+.dashboard-items-button {
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out;
+}
+.dashboard-items-button:hover {
+  box-shadow: 0 0 2px 1px rgb(0, 177, 59);
+}
