@@ -84,7 +84,8 @@
       <script>
         $("document").ready(() => {
           $(".dashboard-items-button").on("click", (e) => {
-            console.log("a");
+            $(".dashboard-items-button").removeClass("active");
+            $(e.currentTarget).addClass("active");
           });
           $(".my-card-add").on("click", (e) => {
             console.log("b");

@@ -1,6 +1,9 @@
 body {
   background: hsl(0, 0%, 10%);
 }
+.my-card-container {
+  position: relative;
+}
 .my-card {
   width: 250px;
   height: auto;
@@ -11,9 +14,6 @@ body {
   background: var(--black);
   font-family: NunitoSans-Regular, sans-serif;
   font-weight: bold;
-}
-.my-card-container {
-  position: relative;
 }
 /* add btn on dashboard items */
 .my-card-add {
@@ -32,13 +32,7 @@ body {
     top 0.2s ease-in-out, right 0.2s ease-in-out;
   font-weight: bold;
 }
-.my-card-add:hover {
-  background: hsl(140, 100%, 30%);
-  padding: 10px 20px;
-  font-size: 1.3rem;
-  right: -1px;
-}
-
+/* my-card-body*************************************** */
 .my-card-body {
   background: var(--silver);
   color: var(--black);
@@ -50,6 +44,7 @@ body {
 .my-card-body h1 {
   margin: 0;
 }
+/* my-card-footer************************************* */
 .my-card-footer {
   padding: 10px 20px;
   background: var(--black);
@@ -60,6 +55,17 @@ body {
   cursor: pointer;
   transition: box-shadow 0.2s ease-in-out;
 }
+/* hovers ****************************************/
+.my-card-add:hover {
+  background: hsl(140, 100%, 30%);
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  right: -1px;
+}
 .dashboard-items-button:hover {
-  box-shadow: 0 0 2px 1px rgb(0, 177, 59);
+  box-shadow: 0 0 5px 1px rgb(0, 177, 59);
+}
+/* active style for my-cards */
+.active {
+  box-shadow: 0 0 1px 1px rgb(0, 177, 59);
 }

@@ -1,7 +1,7 @@
 /* navbar */
 .navbar {
   background: var(--black);
-  height: 60px;
+  height: 67px;
   width: 100vw;
   position: fixed;
   transition: transform 0.2s ease;
