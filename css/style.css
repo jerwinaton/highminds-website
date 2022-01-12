@@ -13,8 +13,11 @@
   font-family: NunitoSans-Regular;
   src: url("../fonts/Nunito_Sans/NunitoSans-Regular.ttf");
 }
+/* add padding to the first section */
+section {
+  padding-top: 80px;
+}
 /* Media Queries */
-
 /* Standard desktop  */
 
 @media (max-width: 1920px) {
