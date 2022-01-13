@@ -91,6 +91,38 @@
             console.log("b");
           });
         });
+
+        // sample data
+        const products = [
+          { name: "Tshirt", price: 100, image: "product-category.jpg" },
+          { name: "Shoe", price: 500, image: "product-category.jpg" },
+          { name: "Bag", price: 400, image: "product-category.jpg" },
+          { name: "Slipper", price: 700, image: "product-category.jpg" },
+          { name: "Shades", price: 700, image: "product-category.jpg" },
+          { name: "Owa", price: 199, image: "product-category.jpg" },
+        ];
+
+        const categories = [
+          { name: "Tshirt", total_products: 10, image: "product-category.jpg" },
+          { name: "Shoe", total_products: 50, image: "product-category.jpg" },
+          { name: "Bag", total_products: 40, image: "product-category.jpg" },
+          {
+            name: "Slipper",
+            total_products: 70,
+            image: "product-category.jpg",
+          },
+          { name: "Shades", total_products: 70, image: "product-category.jpg" },
+          { name: "Owa", total_products: 19, image: "product-category.jpg" },
+        ];
+
+        const collection = [
+          { name: "Zoro", total_products: 10, image: "collection.jpg" },
+          { name: "Malo", total_products: 50, image: "collection.jpg" },
+          { name: "Zimo", total_products: 40, image: "collection.jpg" },
+          { name: "Solo", total_products: 70, image: "collection.jpg" },
+          { name: "Hades", total_products: 70, image: "collection.jpg" },
+          { name: "Eagle", total_products: 19, image: "collection.jpg" },
+        ];
       </script>
     </section>
   </body>
