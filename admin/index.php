@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="../images/highminds-logo.ico" type="image/x-icon" />
-  <title>HGHMNDS Clothing | Login</title>
+  <title>HGHMNDS Clothing | Admin</title>
   <link rel="stylesheet" href="../bootstrap5/css/bootstrap.min.css" />
   <link rel="stylesheet" href="../css/reset.css" />
   <link rel="stylesheet" href="../css/style.css" />
@@ -14,9 +14,11 @@
   <link rel="stylesheet" href="css/admin.css" />
   <link rel="stylesheet" href="css/cards-categories.css" />
   <link rel="stylesheet" href="css/cards-collections.css" />
+  <link rel="stylesheet" href="css/cards-products.css" />
+  <link rel="stylesheet" href="css/view-products-navbar.css" />
   <script src="../jquery/jquery3.6.0.min.js"></script>
   <!-- fontawesome cdn -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 </head>
 
 <body>
@@ -88,34 +90,67 @@
 
       // sample data
       const products = [{
-          name: "Tshirt",
+          name: "Item1",
           price: 100,
-          image: "product-category.jpg"
+          image: "product-category.jpg",
+          category: "Tshirt",
+          collection: "Zimo"
         },
         {
-          name: "Shoe",
+          name: "Item2",
           price: 500,
-          image: "product-category.jpg"
+          image: "product-category.jpg",
+          category: "Slipper",
+          collection: "Hades"
         },
         {
-          name: "Bag",
+          name: "Item3",
           price: 400,
-          image: "product-category.jpg"
+          image: "product-category.jpg",
+          category: "Bag",
+          collection: "Zimo"
         },
         {
-          name: "Slipper",
+          name: "Item4",
           price: 700,
-          image: "product-category.jpg"
+          image: "product-category.jpg",
+          category: "Shoe",
+          collection: "Solo"
         },
         {
-          name: "Shades",
+          name: "Item5",
           price: 700,
-          image: "product-category.jpg"
+          image: "product-category.jpg",
+          category: "Shoe",
+          collection: "Eagle"
         },
         {
-          name: "Owa",
+          name: "Item6",
           price: 199,
-          image: "product-category.jpg"
+          image: "product-category.jpg",
+          category: "Tshirt",
+          collection: "Solo"
+        },
+        {
+          name: "Item7",
+          price: 199,
+          image: "product-category.jpg",
+          category: "Tshirt",
+          collection: "Eagle"
+        },
+        {
+          name: "Item8",
+          price: 199,
+          image: "product-category.jpg",
+          category: "Shades",
+          collection: "Malo"
+        },
+        {
+          name: "Item9",
+          price: 199,
+          image: "product-category.jpg",
+          category: "Bag",
+          collection: "Zoro"
         },
       ];
 
@@ -144,11 +179,8 @@
           total_products: 70,
           icon: "fas fa-tshirt fa-3x"
         },
-        {
-          name: "Owa",
-          total_products: 19,
-          icon: "fas fa-tshirt fa-3x"
-        },
+
+
       ];
 
       const collections = [{
@@ -184,7 +216,36 @@
       ];
     </script>
   </section>
-  <section>
+  <section class="products-navbar">
+    <div class="container-md">
+      <div class="view-products-navbar">
+        <div class="sort-group-1 d-flex flex-column justify-content-center">
+          <label for="">Sort by:</label>
+          <div>
+            <button>Latest</button>
+            <button>Price</button>
+          </div>
+        </div>
+        <div class="sort-group-2 d-flex flex-row">
+          <div class="d-flex flex-column justify-content-center">
+            <label for="select_category">Category:</label>
+            <select name="category" id="select_category">
+              <option value="">All</option>
+            </select>
+          </div>
+          <div class="d-flex flex-column justify-content-center">
+            <label for="select_collections">Collections:</label>
+            <select name="collections" id="select_collections">
+              <option value="">All</option>
+            </select>
+          </div>
+        </div>
+        <div class="sort-add-button">
+          <button>Add New</button>
+        </div>
+      </div>
+
+    </div>
     <div class="outputs">
       <div class="row justify-content-center">
         <!-- to be populated -->

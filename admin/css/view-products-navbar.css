@@ -1,0 +1,38 @@
+.products-navbar {
+  padding: 0;
+}
+.view-products-navbar {
+  width: 100%;
+  background: var(--silver);
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  justify-content: center;
+}
+.view-products-navbar label {
+  font-size: 1.8rem;
+}
+.sort-group-1,
+.sort-group-2 {
+  margin-right: 50px;
+}
+.sort-group-1 button {
+  border: none;
+  outline: none;
+  padding: 5px 15px;
+}
+.sort-group-2 div {
+  margin: 0 5px;
+}
+.sort-group-2 select {
+  border: none;
+  outline: none;
+  padding: 5px 15px;
+  margin-top: 1px;
+}
+.sort-add-button button {
+  border: none;
+  outline: none;
+  height: 100%;
+  padding: 0 20px;
+}
