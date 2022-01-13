@@ -104,16 +104,16 @@
         ];
 
         const categories = [
-          { name: "Tshirt", total_products: 10, image: "product-category.jpg" },
-          { name: "Shoe", total_products: 50, image: "product-category.jpg" },
-          { name: "Bag", total_products: 40, image: "product-category.jpg" },
+          { name: "Tshirt", total_products: 10, icon: "fas fa-tshirt fa-3x" },
+          { name: "Shoe", total_products: 50, icon: "fas fa-tshirt fa-3x" },
+          { name: "Bag", total_products: 40, icon: "fas fa-tshirt fa-3x" },
           {
             name: "Slipper",
             total_products: 70,
-            image: "product-category.jpg",
+            icon: "fas fa-tshirt fa-3x",
           },
-          { name: "Shades", total_products: 70, image: "product-category.jpg" },
-          { name: "Owa", total_products: 19, image: "product-category.jpg" },
+          { name: "Shades", total_products: 70, icon: "fas fa-tshirt fa-3x" },
+          { name: "Owa", total_products: 19, icon: "fas fa-tshirt fa-3x" },
         ];
 
         const collection = [
@@ -128,7 +128,49 @@
     </section>
     <section>
       <div class="outputs">
-        <div class="row justify-content-center"></div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-6 my-card-collections-container">
+            <div class="collections-actions">
+              <button class=""><i class="fas fa-edit fa-lg"></i></button>
+              <button class=""><i class="fas fa-trash-alt fa-lg"></i></button>
+            </div>
+            <div class="my-card-collections">
+              <div class="my-card-head my-card-collections-head">
+                <h3>Name</h3>
+              </div>
+              <div class="my-card-body my-card-collections-body">
+                <i class="fas fa-tshirt fa-3x"></i>
+                <h1>12</h1>
+              </div>
+              <div
+                class="my-card-footer my-card-collections-footer d-flex flex-row justify-content-between"
+              >
+                View All <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 my-card-collections-container">
+            <div class="collections-actions">
+              <button class=""><i class="fas fa-edit fa-lg"></i></button>
+              <button class=""><i class="fas fa-trash-alt fa-lg"></i></button>
+            </div>
+            <div class="my-card-collections">
+              <div class="my-card-head my-card-collections-head">
+                <h3>Name</h3>
+              </div>
+              <div class="my-card-body my-card-collections-body">
+                <i class="fas fa-tshirt fa-3x"></i>
+                <h1>12</h1>
+              </div>
+              <div
+                class="my-card-footer my-card-collections-footer d-flex flex-row justify-content-between"
+              >
+                View All <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <!-- end of outputs section -->
@@ -144,21 +186,20 @@
             const container = $(".outputs").find(".row");
             categories.forEach((result) => {
               const content = `
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-card-category-container" >
+          <div class="col-6 col-md-4 col-lg-3 my-card-category-container" >
             <div class="category-actions">
               <button class=""><i class="fas fa-edit fa-lg"></i></button>
               <button class=""><i class="fas fa-trash-alt fa-lg"></i></button>
             </div>
-            <div class="my-card my-card-category">
+            <div class="my-card-category">
               <div class="my-card-head my-card-category-head">
                 <h3>${result.name}</h3>
               </div>
               <div class="my-card-body my-card-category-body">
-                <img src="${result.image}" width=250>
-                <!-- <i class="fas fa-tshirt fa-3x"></i> -->
+                <i class="${result.icon}"></i>
                 <h1>${result.total_products}</h1>
               </div>
-              <div class="my-card-footer my-card-category-footer">
+              <div class="my-card-footer my-card-category-footer d-flex flex-row justify-content-between">
                 View All <i class="fas fa-chevron-right"></i>
               </div>
             </div>

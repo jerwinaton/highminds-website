@@ -1,7 +1,5 @@
 .outputs {
-  width: 80%;
-  margin: 0 auto;
-  /* border: 1px solid white; */
+  border: 1px solid white;
 }
 .my-card-category-container {
   /* border: 1px solid white; */
@@ -36,3 +34,12 @@
 }
 
 /* mycard category */
+.my-card-category {
+  color: white;
+  min-width: 250px;
+}
+@media (max-width: 576px) {
+  .my-card-category {
+    min-width: 200px;
+  }
+}
