@@ -50,11 +50,15 @@ body {
   background: var(--black);
   font-size: 1rem;
 }
-
 .dashboard-items-button {
   cursor: pointer;
   transition: box-shadow 0.2s ease-in-out;
 }
+
+/* output */
+/* .outputs {
+  border: 1px solid white;
+} */
 /* hovers ****************************************/
 .my-card-add:hover {
   background: hsl(140, 100%, 30%);
