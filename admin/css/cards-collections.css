@@ -37,6 +37,9 @@
 .my-card-collections-body {
   padding: 0;
 }
+.my-card-collections-body img {
+  width: auto;
+}
 .my-card-collections-footer {
   font-size: 1.5rem;
 }

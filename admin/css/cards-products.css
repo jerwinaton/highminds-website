@@ -1,0 +1,70 @@
+.my-card-product-body {
+  padding: 0;
+}
+.my-card-product-body img {
+  width: 100%;
+}
+.my-card-product-details {
+  padding: 0 10px;
+  background: var(--black);
+  color: white;
+  font-family: "NunitoSan-Regular", sans-serif;
+}
+.my-card-product-details h4,
+.my-card-product-details p {
+  margin: 0;
+}
+.my-card-product-details p {
+  font-size: 1.4rem;
+}
+.peso-sign {
+  font-size: 1.2rem;
+}
+/* footer */
+.my-card-product-footer {
+  padding: 0;
+}
+.my-card-product-footer button {
+  margin-top: 5px;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 15px 0;
+}
+.my-card-product-footer button:first-child {
+  background: #e8552a;
+  color: white;
+}
+.my-card-product-footer button:last-child {
+  background: #101570;
+  color: white;
+}
+.my-card-product-container {
+  padding: 0;
+  margin: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.product-actions button {
+  border: 0;
+  margin: 0;
+  padding: 15px;
+  height: 55px;
+  width: 55px;
+  outline: none;
+}
+.product-actions button:first-child {
+  color: rgb(0, 41, 59);
+  background: rgb(0, 173, 253);
+}
+.product-actions button:last-child {
+  color: rgb(48, 0, 0);
+  background: rgb(255, 54, 54);
+}
+.product-actions {
+  position: absolute;
+  right: -120px;
+  top: 0;
+  display: flex;
+  transition: right 0.2s ease-in-out;
+}
