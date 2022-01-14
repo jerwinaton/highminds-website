@@ -1,8 +1,17 @@
 .my-card-product-body {
   padding: 0;
 }
-.my-card-product-body img {
+
+.product-img-wrapper {
+  display: flex;
   width: 100%;
+  height: 300px;
+  background: var(--black);
+  overflow: hidden;
+}
+.my-card-product-body img {
+  height: 100%;
+  object-fit: contain;
 }
 .my-card-product-details {
   padding: 0 10px;
@@ -39,9 +48,8 @@
   background: #101570;
   color: white;
 }
-.my-card-product-container {
+.card-wrapper {
   padding: 0;
-  margin: 5px;
   position: relative;
   overflow: hidden;
 }
@@ -67,4 +75,12 @@
   top: 0;
   display: flex;
   transition: right 0.2s ease-in-out;
+}
+.card-wrapper {
+  margin: 3px;
+}
+@media (max-width: 768px) {
+  .product-img-wrapper {
+    height: 200px;
+  }
 }

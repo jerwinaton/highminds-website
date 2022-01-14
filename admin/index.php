@@ -269,15 +269,18 @@
           const container = $(".outputs").find(".row");
           products.forEach((result) => {
             const content = `
-            <div class="col-5 col-md-3 my-card-product-container my-5">
+            <div class="col-5 col-lg-4 my-card-product-container my-5">
+           <div class="card-wrapper">
           <div class="product-actions d-flex flex-row">
             <button class="">a<i class="fas fa-edit fa-lg"></i></button>
             <button class="">a<i class="fas fa-trash-alt fa-lg"></i></button>
           </div>
           <div class="my-card-product">
             <div class="my-card-body my-card-product-body">
+            <div class="product-img-wrapper d-flex align-items-center justify-content-center">  
               <img src="${result.image}" alt="">
-              <div class="my-card-product-details d-flex flex-column align-items-start justify-content-start">
+            </div> 
+            <div class="my-card-product-details d-flex flex-column align-items-start justify-content-start">
                 <h3 class="mt-2">${result.name}</h3>
                 <div class="mt-3 d-flex flex-row align-items-end">
                   <span class="peso-sign">&#8369;</span>
@@ -290,6 +293,7 @@
               <button>Shopee</button>
               <button>Lazada</button>
             </div>
+          </div>
           </div>
         </div>
           `;
