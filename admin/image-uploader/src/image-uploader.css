@@ -126,9 +126,14 @@
   -webkit-appearance: none;
   border: none;
 }
-
 .image-uploader .uploaded .uploaded-image:hover .delete-image {
   display: block;
+}
+/* show x button if in mobile to tablet view */
+@media (max-width: 768px) {
+  .image-uploader .uploaded .uploaded-image .delete-image {
+    display: block;
+  }
 }
 
 .image-uploader .uploaded .uploaded-image .delete-image i {

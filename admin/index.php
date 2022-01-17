@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="css/cards-collections.css" />
   <link rel="stylesheet" href="css/cards-products.css" />
   <link rel="stylesheet" href="css/view-products-navbar.css" />
+  <link rel="stylesheet" href="css/my-modal-products.css" />
   <script src="../jquery/jquery3.6.0.min.js"></script>
   <script src="js/populate-products.js"></script>
   <script src="js/populate-categories.js"></script>
@@ -39,7 +40,7 @@
     <div class="dashboard-items">
       <div class="row">
         <div class="my-card-container col-4 d-flex align-items-center">
-          <button class="my-card-add">Add <i class="fas fa-plus"></i></button>
+          <button class="my-card-add my-card-add-products">Add <i class="fas fa-plus"></i></button>
           <div class="my-card dashboard-items-button products">
             <div class="my-card-head d-flex justify-content-between">
               <h3>Products</h3>
@@ -53,7 +54,7 @@
           </div>
         </div>
         <div class="my-card-container col-4 d-flex justify-content-center">
-          <button class="my-card-add">Add <i class="fas fa-plus"></i></button>
+          <button class="my-card-add my-card-add-categories">Add <i class="fas fa-plus"></i></button>
           <div class="my-card dashboard-items-button categories">
             <div class="my-card-head d-flex justify-content-between">
               <h3>Categories</h3>
@@ -67,7 +68,7 @@
           </div>
         </div>
         <div class="my-card-container col-4 d-flex justify-content-center">
-          <button class="my-card-add">Add <i class="fas fa-plus"></i></button>
+          <button class="my-card-add my-card-add-collections">Add <i class="fas fa-plus"></i></button>
           <div class="my-card dashboard-items-button collections">
             <div class="my-card-head d-flex justify-content-between">
               <h3>Collections</h3>
@@ -82,6 +83,26 @@
         </div>
       </div>
     </div>
+    <!-- show modal -->
+    <script>
+      $("document").ready(() => {
+        let modal = $(".my-modal");
+        let productBtn = $(".my-card-add-products");
+        productBtn.on("click", () => {
+          modal.css("display", "block");
+        })
+        $(".close").on("click", (e) => {
+          e.preventDefault();
+          modal.css("display", "none");
+        })
+        window.addEventListener("click", (e) => {
+          if (e.target == document.querySelector(".my-modal")) {
+            modal.css("display", "none");
+          }
+
+        })
+      });
+    </script>
     <!-- end of dashboard-items -->
     <!-- script to add active classes to buttons clicked -->
     <script>
@@ -125,41 +146,6 @@
         </div>
       </div>
     </div>
-
-    <div class="my-modal container">
-      <form action="" name="form-example-1" id="form-example-1" nctype="multipart/form-data">
-        <div class="row">
-          <div class="col-6">
-            <div class="input-field">
-              <label class="active">Photos</label>
-              <div class="input-images-1" style="padding-top: .5rem;"></div>
-            </div>
-            <script>
-              $('.input-images-1').imageUploader();
-            </script>
-          </div>
-          <div class="col-6 d-flex flex-column">
-            <label for="product-name">Name</label>
-            <input type="text" id="product-name">
-            <label for="product-price">Price</label>
-            <input type="text" id="product-price">
-            <label for="product-category">Category</label>
-            <select name="product-category" id="product-category">
-              <option value="">All</option>
-            </select>
-            <label for="product-collection">Collection</label>
-            <select name="product-collection" id="product-collection">
-              <option value="">All</option>
-            </select>
-            <label for="product-description">Description</label>
-            <textarea style="resize:none" id="product-description" name="product-description" rows="3">
-
-            </textarea>
-            <button id="products-btn-add">Add</button>
-          </div>
-        </div>
-      </form>
-    </div>
     <div class="outputs d-flex justify-content-center">
       <div class="row justify-content-center container-md">
         <!-- to be populated -->
@@ -167,6 +153,51 @@
     </div>
   </section>
   <!-- end of outputs section -->
+
+  <!-- products modal edit/add -->
+  <div class="my-modal">
+    <form action="" class="my-modal-content container" name="my-modal-products" enctype="multipart/form-data">
+      <div class="my-modal-header d-flex flex-row align-items-center justify-content-between">
+        <button class="hide">x</button>
+        <h3 class="my-modal-header-title">Add Products</h3>
+        <button class="close">x<i class="fas fa-times"></i></button>
+      </div>
+      <div class="row justify-content-center my-modal-body">
+        <div class="col-10 col-md-6 d-flex flex-column">
+          <div class="input-field">
+            <label class="active">Photos</label>
+            <div class="input-images-1" style="padding-top: .5rem;"></div>
+          </div>
+          <!-- image-uploader plugin -->
+          <script>
+            $('.input-images-1').imageUploader();
+          </script>
+          <label for="product-shopee-link">Shopee Link</label>
+          <input type="text" id="product-shopee-link">
+          <label for="product-lazada-link">Lazada Link</label>
+          <input type="text" id="product-lazada-link">
+        </div>
+        <div class="col-10 col-md-6 d-flex flex-column">
+          <label for="product-name">Name</label>
+          <input type="text" id="product-name">
+          <label for="product-price">Price (Peso)</label>
+          <input type="text" id="product-price">
+          <label for="product-category">Category</label>
+          <select name="product-category" id="product-category">
+            <option value="">All</option>
+          </select>
+          <label for="product-collection">Collection</label>
+          <select name="product-collection" id="product-collection">
+            <option value="">All</option>
+          </select>
+          <label for="product-description">Description</label>
+          <textarea style="resize:none" id="product-description" name="product-description" rows="3"></textarea>
+          <button id="products-btn-add">Add</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- end of products modal edit/add -->
 </body>
 <!-- script -->
 <script src="../bootstrap5/js/bootstrap.bundle.min.js"></script>
