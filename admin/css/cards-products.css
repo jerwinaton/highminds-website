@@ -78,7 +78,11 @@
 }
 .card-wrapper {
   margin: 3px;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out, top 0.2s ease-in-out;
 }
+/* hovers */
+
 @media (max-width: 768px) {
   .product-img-wrapper {
     height: 200px;
