@@ -8,10 +8,10 @@
       preloaded: [],
       imagesInputName: "images",
       preloadedInputName: "preloaded",
-      label: "Drag & Drop files here or click to browse",
-      extensions: [".jpg", ".jpeg", ".png", ".gif", ".svg"],
-      mimes: ["image/jpeg", "image/png", "image/gif", "image/svg+xml"],
-      maxSize: undefined,
+      label: "Drag & Drop images here or Click to browse",
+      extensions: [".jpg", ".jpeg", ".png"],
+      mimes: ["image/jpeg", "image/png"],
+      maxSize: 2 * 1024 * 1024,
       maxFiles: undefined,
     };
 
@@ -49,6 +49,9 @@
         if (plugin.settings.preloaded.length) {
           // Change style
           $container.addClass("has-files");
+
+          // remove .uploaded margin
+          $(".uploaded").css("margin-top", "100px");
 
           // Get the upload images container
           let $uploadedContainer = $container.find(".uploaded");
@@ -194,6 +197,9 @@
         if (!$parent.children().length) {
           // Remove the 'has-files' class
           $parent.parent().removeClass("has-files");
+
+          // remove .uploaded margin
+          $(".uploaded").css("margin-top", "0px");
         }
       });
 
@@ -207,8 +213,12 @@
       // Change the container style
       if (e.type === "dragover") {
         $(this).addClass("drag-over");
+        $(".upload-text > span").text("Drop here to upload the image(s)");
       } else {
         $(this).removeClass("drag-over");
+        $(".upload-text > span").text(
+          "Drag & Drop images here or Click to browse"
+        );
       }
     };
 
@@ -274,7 +284,11 @@
             '", "'
           )}"`
         );
-
+        // change it back to default after alert
+        $(".image-uploader").removeClass("drag-over");
+        $(".upload-text > span").text(
+          "Drag & Drop images here or Click to browse"
+        );
         return false;
       }
 
@@ -329,6 +343,9 @@
     let setPreview = function ($container, files) {
       // Add the 'has-files' class
       $container.addClass("has-files");
+
+      // add .uploaded margin
+      $(".uploaded").css("margin-top", "100px");
 
       // Get the upload images container
       let $uploadedContainer = $container.find(".uploaded"),

@@ -16,7 +16,7 @@
 [class^="iui-"],
 [class*="iui-"] {
   font-family: "Image Uploader Icons" !important;
-  speak: none;
+  /* speak: none; */
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -39,13 +39,14 @@
 /* Base style */
 .image-uploader {
   min-height: 10rem;
-  border: 1px solid #d9d9d9;
+  border: 1px dashed gray;
   position: relative;
+  cursor: pointer;
 }
 
 /* Style on hover */
 .image-uploader.drag-over {
-  background-color: #f3f3f3;
+  background-color: #3ae1ff;
 }
 
 /* Hide the file input */
@@ -60,12 +61,12 @@
 /* Text container */
 .image-uploader .upload-text {
   position: absolute;
-  top: 0;
+  top: 10px;
   right: 0;
   left: 0;
-  bottom: 0;
+  font-size: 1.5rem;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-direction: column;
 }
@@ -78,12 +79,14 @@
 
 .image-uploader .upload-text span {
   display: block;
+  text-align: center;
+  cursor: pointer;
 }
 
 /* Hide the text if there is at least one uploaded image */
-.image-uploader.has-files .upload-text {
+/* .image-uploader.has-files .upload-text {
   display: none;
-}
+} */
 
 /* Uploaded images container */
 .image-uploader .uploaded {

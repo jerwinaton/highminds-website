@@ -20,6 +20,9 @@
   <script src="js/populate-products.js"></script>
   <script src="js/populate-categories.js"></script>
   <script src="js/populate-collections.js"></script>
+  <!-- image uploader -->
+  <link rel="stylesheet" href="image-uploader/src/image-uploader.css" />
+  <script src="image-uploader/src/image-uploader.js"></script>
   <!-- fontawesome cdn -->
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 </head>
@@ -121,7 +124,41 @@
           <button>Add New</button>
         </div>
       </div>
+    </div>
 
+    <div class="my-modal container">
+      <form action="" name="form-example-1" id="form-example-1" nctype="multipart/form-data">
+        <div class="row">
+          <div class="col-6">
+            <div class="input-field">
+              <label class="active">Photos</label>
+              <div class="input-images-1" style="padding-top: .5rem;"></div>
+            </div>
+            <script>
+              $('.input-images-1').imageUploader();
+            </script>
+          </div>
+          <div class="col-6 d-flex flex-column">
+            <label for="product-name">Name</label>
+            <input type="text" id="product-name">
+            <label for="product-price">Price</label>
+            <input type="text" id="product-price">
+            <label for="product-category">Category</label>
+            <select name="product-category" id="product-category">
+              <option value="">All</option>
+            </select>
+            <label for="product-collection">Collection</label>
+            <select name="product-collection" id="product-collection">
+              <option value="">All</option>
+            </select>
+            <label for="product-description">Description</label>
+            <textarea style="resize:none" id="product-description" name="product-description" rows="3">
+
+            </textarea>
+            <button id="products-btn-add">Add</button>
+          </div>
+        </div>
+      </form>
     </div>
     <div class="outputs d-flex justify-content-center">
       <div class="row justify-content-center container-md">
