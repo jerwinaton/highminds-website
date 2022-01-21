@@ -156,27 +156,13 @@
 
   <!-- products modal edit/add -->
   <div class="my-modal">
-    <form action="" class="my-modal-content container" name="my-modal-products" enctype="multipart/form-data">
+    <form action="php/upload-products.php" class="my-modal-content container" name="my-modal-products" enctype="multipart/form-data">
       <div class="my-modal-header d-flex flex-row align-items-center justify-content-between">
         <button class="hide">x</button>
         <h3 class="my-modal-header-title">Add Products</h3>
         <button class="close">x<i class="fas fa-times"></i></button>
       </div>
       <div class="row justify-content-center my-modal-body">
-        <div class="col-10 col-md-6 d-flex flex-column">
-          <div class="input-field">
-            <label class="active">Photos</label>
-            <div class="input-images-1" style="padding-top: .5rem;"></div>
-          </div>
-          <!-- image-uploader plugin -->
-          <script>
-            $('.input-images-1').imageUploader();
-          </script>
-          <label for="product-shopee-link">Shopee Link</label>
-          <input type="text" id="product-shopee-link">
-          <label for="product-lazada-link">Lazada Link</label>
-          <input type="text" id="product-lazada-link">
-        </div>
         <div class="col-10 col-md-6 d-flex flex-column">
           <label for="product-name">Name</label>
           <input type="text" id="product-name">
@@ -192,7 +178,27 @@
           </select>
           <label for="product-description">Description</label>
           <textarea style="resize:none" id="product-description" name="product-description" rows="3"></textarea>
+        </div>
+        <div class="col-10 col-md-6 d-flex flex-column">
+          <div class="input-field">
+            <label for="photos">Photos</label>
+            <div id="photos" class="input-images-1" style="padding-top: .5rem;"></div>
+          </div>
+          <!-- image-uploader plugin -->
+          <script>
+            $('.input-images-1').imageUploader();
+          </script>
+          <label for="product-shopee-link">Shopee Link</label>
+          <input type="text" id="product-shopee-link">
+          <label for="product-lazada-link">Lazada Link</label>
+          <input type="text" id="product-lazada-link">
+
+        </div>
+      </div>
+      <div class="row my-modal-footer d-flex flex-row justify-content-center">
+        <div class="col-10 col-md-6">
           <button id="products-btn-add">Add</button>
+
         </div>
       </div>
     </form>
