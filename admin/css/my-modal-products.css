@@ -54,6 +54,17 @@
   overflow-y: auto;
   max-height: 80vh;
 }
+.my-modal-body::-webkit-scrollbar {
+  width: 5px;
+}
+.my-modal-body::-webkit-scrollbar-track {
+  background: #e0e0e0;
+  border-radius: 10px;
+}
+.my-modal-body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgb(119, 119, 119);
+}
 #products-btn-add {
   border: 0;
   outline: 0;
