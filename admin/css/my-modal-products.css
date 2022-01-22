@@ -63,7 +63,10 @@
 }
 .my-modal-body::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background: rgb(119, 119, 119);
+  background: #777777;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #636363;
 }
 #products-btn-add {
   border: 0;

@@ -5,6 +5,21 @@
   --lavander: #e6c4c0;
   --silver: #d9d2cf;
 }
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #3a3a3a;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #4d4d4d;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1f1f1f;
+}
 @font-face {
   font-family: NunitoSans-Black;
   src: url("../fonts/Nunito_Sans/NunitoSans-Black.ttf");

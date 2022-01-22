@@ -2,29 +2,39 @@ $(document).ready(() => {
   // sample data
   const categories = [
     {
-      name: "Tshirt",
+      name: "Shirts",
       total_products: 10,
-      icon: "fas fa-tshirt fa-3x",
+      icon: "uploads/category_icons/",
     },
     {
-      name: "Shoe",
+      name: "Bandanas (Scarf)",
       total_products: 50,
-      icon: "fas fa-tshirt fa-3x",
+      icon: "uploads/category_icons/",
     },
     {
-      name: "Bag",
+      name: "Hoodies",
       total_products: 40,
-      icon: "fas fa-tshirt fa-3x",
+      icon: "uploads/category_icons/",
     },
     {
-      name: "Slipper",
+      name: "Shorts",
       total_products: 70,
-      icon: "fas fa-tshirt fa-3x",
+      icon: "uploads/category_icons/",
     },
     {
-      name: "Shades",
+      name: "Caps",
       total_products: 70,
-      icon: "fas fa-tshirt fa-3x",
+      icon: "uploads/category_icons/",
+    },
+    {
+      name: "Bags",
+      total_products: 70,
+      icon: "uploads/category_icons/",
+    },
+    {
+      name: "Sandals",
+      total_products: 70,
+      icon: "uploads/category_icons/",
     },
   ];
 

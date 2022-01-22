@@ -43,10 +43,13 @@
   position: relative;
   cursor: pointer;
 }
+.image-uploader:hover {
+  background-color: rgba(58, 255, 140, 0.466);
+}
 
 /* Style on hover */
 .image-uploader.drag-over {
-  background-color: #3ae1ff;
+  background-color: rgba(58, 255, 140, 0.466);
 }
 
 /* Hide the file input */
