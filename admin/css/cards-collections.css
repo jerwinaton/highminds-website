@@ -33,6 +33,7 @@
   color: white;
   width: auto;
   height: auto;
+  cursor: pointer;
 }
 .my-card-collections-body {
   padding: 0;
