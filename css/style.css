@@ -4,6 +4,15 @@
   --green: #006b5c;
   --lavander: #e6c4c0;
   --silver: #d9d2cf;
+  --dark-gradient: linear-gradient(
+    to left,
+    rgb(37, 39, 38),
+    rgb(64, 66, 65),
+    rgb(64, 66, 65),
+    rgb(37, 39, 38)
+  );
+  --new-black: rgb(37, 39, 38);
+  --new-light-black: rgb(64, 66, 65);
 }
 /* scrollbar */
 ::-webkit-scrollbar {

@@ -1,11 +1,11 @@
 /* navbar */
 .navbar {
-  background: var(--black);
   height: 67px;
   width: 100vw;
   position: fixed;
   transition: transform 0.2s ease;
   z-index: 999;
+  background: var(--dark-gradient);
 }
 .navbar-container {
   width: 80%;
@@ -36,7 +36,7 @@
   font-family: NunitoSans-Regular;
   font-size: 1.5rem;
   margin-inline: 5px;
-  border: 1px solid var(--black);
+  border: 1px solid transparent;
   transition: border 0.3s ease;
 }
 /* add undeline on hover */

@@ -34,6 +34,8 @@
 .my-card-category {
   color: white;
   min-width: 250px;
+  cursor: pointer;
+  margin: 5px;
 }
 @media (max-width: 576px) {
   .my-card-category {

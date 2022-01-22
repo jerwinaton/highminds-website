@@ -11,6 +11,7 @@
   background: rgba(155, 155, 155, 0.4); /* Black w/ opacity */
 }
 .my-modal-content {
+  border-radius: 5px;
   background: var(--silver);
   max-width: 600px;
   padding: 20px;
@@ -69,6 +70,7 @@
   background: #636363;
 }
 #products-btn-add {
+  border-radius: 5px;
   border: 0;
   outline: 0;
   margin-top: 10px;

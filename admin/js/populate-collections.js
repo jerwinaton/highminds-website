@@ -44,7 +44,7 @@ $(document).ready(() => {
       const container = $(".outputs").find(".row");
       collections.forEach((result) => {
         const content = `
-            <div class="col-12 col-md-6 my-card-collections-container">
+            <div class="col-12 my-5 col-md-6 my-card-collections-container">
           <div class="collections-actions">
             <button class=""><i class="fas fa-edit fa-lg"></i></button>
             <button class=""><i class="fas fa-trash-alt fa-lg"></i></button>
