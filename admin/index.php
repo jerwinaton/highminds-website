@@ -223,7 +223,7 @@
           <script>
             let products_options = {
               preloaded: [],
-              imagesInputName: "products_images",
+              imagesInputName: "collection_image",
               preloadedInputName: "preloaded",
               label: "Drag & Drop images here or Click to browse",
               extensions: [".jpg", ".jpeg", ".png"],
@@ -269,7 +269,7 @@
           <script>
             let categories_options = {
               preloaded: [],
-              imagesInputName: "categories_icons",
+              imagesInputName: "category_icon",
               preloadedInputName: "preloaded",
               label: "Drag & Drop images here or Click to browse",
               extensions: [".jpg", ".jpeg", ".png", '.svg'],
@@ -311,7 +311,7 @@
           <script>
             let collections_options = {
               preloaded: [],
-              imagesInputName: "collections_images",
+              imagesInputName: "collection_image",
               preloadedInputName: "preloaded",
               label: "Drag & Drop images here or Click to browse",
               extensions: [".jpg", ".jpeg", ".png"],
@@ -341,5 +341,6 @@
 <script src="../js/hide-navbar-onscroll.js"></script>
 <!-- script for upload categories modal ajax -->
 <script src="js/upload-categories.js"></script>
+<script src="js/upload-collections.js"></script>
 
 </html>
