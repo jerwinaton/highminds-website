@@ -86,20 +86,35 @@
     <!-- show modal -->
     <script>
       $("document").ready(() => {
-        let modal = $(".my-modal");
+        // show products modal
+        let productsModal = $("#products-modal");
         let productBtn = $(".my-card-add-products");
         productBtn.on("click", () => {
-          modal.css("display", "block");
+          productsModal.css("display", "block");
         })
         $(".close").on("click", (e) => {
           e.preventDefault();
-          modal.css("display", "none");
+          productsModal.css("display", "none");
         })
         window.addEventListener("click", (e) => {
-          if (e.target == document.querySelector(".my-modal")) {
-            modal.css("display", "none");
+          if (e.target == document.querySelector("#products-modal")) {
+            productsModal.css("display", "none");
           }
-
+        })
+        // show categories modal
+        let categoriesModal = $("#categories-modal");
+        let categoryBtn = $(".my-card-add-categories");
+        categoryBtn.on("click", () => {
+          categoriesModal.css("display", "block");
+        })
+        $(".close").on("click", (e) => {
+          e.preventDefault();
+          categoriesModal.css("display", "none");
+        })
+        window.addEventListener("click", (e) => {
+          if (e.target == document.querySelector("#categories-modal")) {
+            categoriesModal.css("display", "none");
+          }
         })
       });
     </script>
@@ -155,8 +170,8 @@
   <!-- end of outputs section -->
 
   <!-- products modal edit/add -->
-  <div class="my-modal">
-    <form action="php/upload-products.php" class="my-modal-content container" name="my-modal-products" enctype="multipart/form-data">
+  <div class="my-modal" id="products-modal">
+    <form action="php/upload-products.php" method="POST" class="my-modal-content container" name="my-modal-products" enctype="multipart/form-data">
       <div class="my-modal-header d-flex flex-row align-items-center justify-content-between">
         <button class="hide">x</button>
         <h3 class="my-modal-header-title">Add Products</h3>
@@ -186,7 +201,17 @@
           </div>
           <!-- image-uploader plugin -->
           <script>
-            $('.input-images-1').imageUploader();
+            let products_options = {
+              preloaded: [],
+              imagesInputName: "products_images",
+              preloadedInputName: "preloaded",
+              label: "Drag & Drop images here or Click to browse",
+              extensions: [".jpg", ".jpeg", ".png"],
+              mimes: ["image/jpeg", "image/png"],
+              maxSize: 2 * 1024 * 1024,
+              maxFiles: undefined,
+            };
+            $('.input-images-1').imageUploader(products_options);
           </script>
           <label for="product-shopee-link">Shopee Link</label>
           <input type="text" id="product-shopee-link">
@@ -204,6 +229,50 @@
     </form>
   </div>
   <!-- end of products modal edit/add -->
+  <!-- categories modal -->
+  <div class="my-modal" id="categories-modal">
+    <form action="php/upload-products.php" method="POST" class="my-modal-content container" name="my-modal-products" enctype="multipart/form-data">
+      <div class="my-modal-header d-flex flex-row align-items-center justify-content-between">
+        <button class="hide">x</button>
+        <h3 class="my-modal-header-title">Add Categories</h3>
+        <button class="close">x<i class="fas fa-times"></i></button>
+      </div>
+      <div class="row justify-content-center my-modal-body">
+        <div class="col-10 col-md-6 d-flex flex-column">
+          <label for="product-name">Name</label>
+          <input type="text" id="product-name">
+          <div class="input-field">
+            <label for="photos">Photos</label>
+            <div id="photos" class="input-images-2" style="padding-top: .5rem;"></div>
+          </div>
+          <!-- image-uploader plugin -->
+          <!-- image-uploader plugin -->
+          <script>
+            let categories_options = {
+              preloaded: [],
+              imagesInputName: "categories_icons",
+              preloadedInputName: "preloaded",
+              label: "Drag & Drop images here or Click to browse",
+              extensions: [".jpg", ".jpeg", ".png", '.svg'],
+              mimes: ["image/jpeg", "image/png", "image/svg+xml"],
+              maxSize: 2 * 1024 * 1024,
+              maxFiles: 1,
+            };
+            $('.input-images-2').imageUploader(categories_options);
+          </script>
+
+        </div>
+      </div>
+      <div class="row my-modal-footer d-flex flex-row justify-content-center">
+        <div class="col-10 col-md-6">
+          <button id="products-btn-add">Add</button>
+
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- end of products modal edit/add -->
+  <!-- end of categories modal -->
 </body>
 <!-- script -->
 <script src="../bootstrap5/js/bootstrap.bundle.min.js"></script>
