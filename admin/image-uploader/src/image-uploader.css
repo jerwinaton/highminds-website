@@ -99,7 +99,7 @@
 
 .image-uploader .uploaded .uploaded-image {
   display: inline-block;
-  width: calc(16.6666667% - 1rem);
+  width: calc(16.6666667%);
   padding-bottom: calc(16.6666667% - 1rem);
   height: 0;
   position: relative;

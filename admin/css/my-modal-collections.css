@@ -13,3 +13,40 @@
 #collections-btn-add:hover {
   opacity: 1;
 }
+#collections-modal .full-width img {
+  width: 100%;
+  margin-inline: auto;
+}
+#collections-modal .full-widt {
+  /* width: 100%; */
+  background: transparent;
+}
+#collections-modal .uploaded {
+  margin-top: 40px;
+}
+#collections-modal .image-uploader {
+  border: 1px solid transparent;
+}
+#collections-modal .uploaded img {
+  height: auto;
+}
+@media screen and (max-width: 1366px) {
+  #collections-modal .full-width {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 992px) {
+  #collections-modal .full-width {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 786px) {
+  #collections-modal .full-width {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  #collections-modal .full-width {
+    width: 100%;
+  }
+}

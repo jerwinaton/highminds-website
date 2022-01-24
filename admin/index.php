@@ -11,6 +11,10 @@
   <link rel="stylesheet" href="../css/reset.css" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/navbar.css" />
+
+  <!-- image uploader -->
+  <link rel="stylesheet" href="image-uploader/src/image-uploader.css" />
+
   <link rel="stylesheet" href="css/admin.css" />
   <link rel="stylesheet" href="css/cards-categories.css" />
   <link rel="stylesheet" href="css/cards-collections.css" />
@@ -24,8 +28,7 @@
   <script src="js/populate-products.js"></script>
   <script src="js/populate-categories.js"></script>
   <script src="js/populate-collections.js"></script>
-  <!-- image uploader -->
-  <link rel="stylesheet" href="image-uploader/src/image-uploader.css" />
+
   <script src="image-uploader/src/image-uploader.js"></script>
   <!-- fontawesome cdn -->
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
@@ -258,7 +261,7 @@
         <button class="close">x<i class="fas fa-times"></i></button>
       </div>
       <div class="row justify-content-center my-modal-body">
-        <div class="col-10 col-md-6 d-flex flex-column">
+        <div class="col-10 col-md-10 d-flex flex-column">
           <label for="category_name">Category Name</label>
           <input type="text" id="category_name" name="category_name" required>
           <div class="input-field">
@@ -300,11 +303,11 @@
         <button class="close">x<i class="fas fa-times"></i></button>
       </div>
       <div class="row justify-content-center my-modal-body">
-        <div class="col-10 col-md-6 d-flex flex-column">
+        <div class="col-10 col-md-12 d-flex flex-column">
           <label for="collection_name">Collection Name</label>
           <input type="text" id="collection_name" name="collection_name" required>
           <div class="input-field">
-            <label for="collection_image">Category Icon</label>
+            <label for="collection_image">Collection Image</label>
             <div id="collection_image" class="input-images-3" style="padding-top: .5rem;"></div>
           </div>
           <!-- image-uploader plugin -->
@@ -320,6 +323,11 @@
               maxFiles: 1,
             };
             $('.input-images-3').imageUploader(collections_options);
+            $("collection_image").on('change', () => {
+              if ($('.input-images-3 .image-uploader').hasClass("has-files")) {
+                console.log("as")
+              }
+            })
           </script>
           <!-- end image-uploader plugin -->
         </div>
