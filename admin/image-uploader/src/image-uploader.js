@@ -13,6 +13,7 @@
       mimes: ["image/jpeg", "image/png"],
       maxSize: 2 * 1024 * 1024,
       maxFiles: undefined,
+      multiple: "multiple",
     };
 
     // Get instance
@@ -80,7 +81,6 @@
         id: plugin.settings.imagesInputName + "-" + random(),
         name: plugin.settings.imagesInputName + "[]",
         accept: plugin.settings.extensions.join(","),
-        multiple: "",
       }).appendTo($container);
 
       // Create the uploaded images container and append it to the container

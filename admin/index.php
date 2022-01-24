@@ -16,7 +16,10 @@
   <link rel="stylesheet" href="css/cards-collections.css" />
   <link rel="stylesheet" href="css/cards-products.css" />
   <link rel="stylesheet" href="css/view-products-navbar.css" />
+  <link rel="stylesheet" href="css/my-modal.css" />
   <link rel="stylesheet" href="css/my-modal-products.css" />
+  <link rel="stylesheet" href="css/my-modal-categories.css" />
+  <link rel="stylesheet" href="css/my-modal-collections.css" />
   <script src="../jquery/jquery3.6.0.min.js"></script>
   <script src="js/populate-products.js"></script>
   <script src="js/populate-categories.js"></script>
@@ -101,6 +104,7 @@
             productsModal.css("display", "none");
           }
         })
+
         // show categories modal
         let categoriesModal = $("#categories-modal");
         let categoryBtn = $(".my-card-add-categories");
@@ -114,6 +118,22 @@
         window.addEventListener("click", (e) => {
           if (e.target == document.querySelector("#categories-modal")) {
             categoriesModal.css("display", "none");
+          }
+        })
+
+        // show collections modal
+        let collectionsModal = $("#collections-modal");
+        let collectionBtn = $(".my-card-add-collections");
+        collectionBtn.on("click", () => {
+          collectionsModal.css("display", "block");
+        })
+        $(".close").on("click", (e) => {
+          e.preventDefault();
+          collectionsModal.css("display", "none");
+        })
+        window.addEventListener("click", (e) => {
+          if (e.target == document.querySelector("#collections-modal")) {
+            collectionsModal.css("display", "none");
           }
         })
       });
@@ -240,12 +260,11 @@
       <div class="row justify-content-center my-modal-body">
         <div class="col-10 col-md-6 d-flex flex-column">
           <label for="category_name">Category Name</label>
-          <input type="text" id="category_name" name="category_name">
+          <input type="text" id="category_name" name="category_name" required>
           <div class="input-field">
             <label for="category_icon">Category Icon</label>
             <div id="category_icon" class="input-images-2" style="padding-top: .5rem;"></div>
           </div>
-          <!-- image-uploader plugin -->
           <!-- image-uploader plugin -->
           <script>
             let categories_options = {
@@ -259,47 +278,8 @@
               maxFiles: 1,
             };
             $('.input-images-2').imageUploader(categories_options);
-            // submit
-            $(document).ready(() => {
-              $('.my-modal-categories').on('submit', function(e) {
-                // prevent default submission
-                e.preventDefault();
-                let formData = new FormData(this);
-                // ajax script to upload category
-                $.ajax({
-                  type: 'post',
-                  url: 'php/upload-categories.php',
-                  data: formData,
-
-                  beforeSend: function() {
-                    $("#categories-btn-add").html("Processing...");
-
-                    // disable button upon submitting data
-                    $("#categories-btn-add").attr('disabled', true);
-
-                    console.log("Processing...");
-                  },
-
-                  complete: function() {
-                    $("#categories-btn-add").html("Add");
-
-                    // enable button again
-                    $("#categories-btn-add").removeAttr('disabled');
-
-                  },
-                  success: function(response) {
-                    $(".my-modal-categories h3").html(response);
-                    console.log("success");
-                  },
-                  cache: false,
-                  contentType: false,
-                  processData: false
-                });
-
-              });
-            })
           </script>
-
+          <!-- end image-uploader plugin -->
         </div>
       </div>
       <div class="row my-modal-footer d-flex flex-row justify-content-center">
@@ -310,12 +290,56 @@
       </div>
     </form>
   </div>
-  <!-- end of products modal edit/add -->
   <!-- end of categories modal -->
+  <!-- categories modal -->
+  <div class="my-modal" id="collections-modal">
+    <form action="php/upload-collections.php" method="POST" class="my-modal-content my-modal-collections container" name="my-modal-collections" enctype="multipart/form-data">
+      <div class="my-modal-header d-flex flex-row align-items-center justify-content-between">
+        <button class="hide">x</button>
+        <h3 class="my-modal-header-title">Add Collection</h3>
+        <button class="close">x<i class="fas fa-times"></i></button>
+      </div>
+      <div class="row justify-content-center my-modal-body">
+        <div class="col-10 col-md-6 d-flex flex-column">
+          <label for="collection_name">Collection Name</label>
+          <input type="text" id="collection_name" name="collection_name" required>
+          <div class="input-field">
+            <label for="collection_image">Category Icon</label>
+            <div id="collection_image" class="input-images-3" style="padding-top: .5rem;"></div>
+          </div>
+          <!-- image-uploader plugin -->
+          <script>
+            let collections_options = {
+              preloaded: [],
+              imagesInputName: "collections_images",
+              preloadedInputName: "preloaded",
+              label: "Drag & Drop images here or Click to browse",
+              extensions: [".jpg", ".jpeg", ".png"],
+              mimes: ["image/jpeg", "image/png"],
+              maxSize: 2 * 1024 * 1024,
+              maxFiles: 1,
+            };
+            $('.input-images-3').imageUploader(collections_options);
+          </script>
+          <!-- end image-uploader plugin -->
+        </div>
+      </div>
+      <div class="row my-modal-footer d-flex flex-row justify-content-center">
+        <div class="col-10 col-md-6">
+          <button id="collections-btn-add">Add</button>
+
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- end of collections modal -->
+
 </body>
 <!-- script -->
 <script src="../bootstrap5/js/bootstrap.bundle.min.js"></script>
 <!-- script for sticky navbar -->
 <script src="../js/hide-navbar-onscroll.js"></script>
+<!-- script for upload categories modal ajax -->
+<script src="js/upload-categories.js"></script>
 
 </html>
