@@ -5,6 +5,7 @@
   margin: 5px;
   width: auto;
   overflow: hidden;
+  transition: top 0.2s ease-in-out;
 }
 .category-actions {
   position: absolute;

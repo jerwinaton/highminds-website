@@ -307,7 +307,7 @@
           <label for="collection_name">Collection Name</label>
           <input type="text" id="collection_name" name="collection_name" required>
           <div class="input-field">
-            <label for="collection_image">Collection Image</label>
+            <label for="collection_image">Collection Image (Recommended Aspect Ratio 2:1)</label>
             <div id="collection_image" class="input-images-3" style="padding-top: .5rem;"></div>
           </div>
           <!-- image-uploader plugin -->

@@ -77,10 +77,12 @@ $(document).ready(() => {
     // show action buttons
     $(".my-card-category-container").on("mouseover", (e) => {
       $(e.currentTarget).find(".category-actions").css("right", "0px");
+      $(e.currentTarget).css("top", "-5px");
     });
     // hide action buttons
     $(".my-card-category-container").on("mouseleave", (e) => {
       $(e.currentTarget).find(".category-actions").css("right", "-120px");
+      $(e.currentTarget).css("top", "0px");
     });
   });
   // end of categories script

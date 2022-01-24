@@ -71,10 +71,12 @@ $(document).ready(() => {
     // show action buttons
     $(".my-card-collections-container").on("mouseover", (e) => {
       $(e.currentTarget).find(".collections-actions").css("right", "0px");
+      $(e.currentTarget).css("top", "-5px");
     });
     // hide action buttons
     $(".my-card-collections-container").on("mouseleave", (e) => {
       $(e.currentTarget).find(".collections-actions").css("right", "-120px");
+      $(e.currentTarget).css("top", "0px");
     });
   });
 });
