@@ -1,19 +1,19 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $targetDir = "../uploads/";
 
-    $fileNames = array_filter($_FILES['categories_icons']['name']);
-    foreach ($_FILES['categories_icons']['name'] as $key => $val) {
-        // File upload path 
-        $fileName = basename($_FILES['categories_icons']['name'][$key]);
-        $targetFilePath = $targetDir . $fileName;
-        echo $targetFilePath;
+    $categoryName = $_POST['category_name'];
+    $targetDir = "../uploads/category_icons/";
 
-        // Upload file to server 
-        if (move_uploaded_file($_FILES["categories_icons"]["tmp_name"][$key], $targetFilePath)) {
-            echo $fileName;
-        } else {
-            $errorUpload .= $_FILES['categories_icons']['name'][$key] . ' | ';
-        }
+    // File upload path 
+    // used index of 0 since it will only accept one file
+    $fileName = basename($_FILES['categories_icons']['name'][0]);
+    $targetFilePath = $targetDir . $fileName;
+    echo $targetFilePath;
+
+    // Upload file to server 
+    if (move_uploaded_file($_FILES["categories_icons"]["tmp_name"][0], $targetFilePath)) {
+        echo $fileName . " " . $categoryName;
+    } else {
+        echo "error";
     }
 }

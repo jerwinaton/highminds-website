@@ -231,7 +231,7 @@
   <!-- end of products modal edit/add -->
   <!-- categories modal -->
   <div class="my-modal" id="categories-modal">
-    <form action="php/upload-products.php" method="POST" class="my-modal-content container" name="my-modal-products" enctype="multipart/form-data">
+    <form action="php/upload-categories.php" method="POST" class="my-modal-content my-modal-categories container" name="my-modal-categories" enctype="multipart/form-data">
       <div class="my-modal-header d-flex flex-row align-items-center justify-content-between">
         <button class="hide">x</button>
         <h3 class="my-modal-header-title">Add Categories</h3>
@@ -239,11 +239,11 @@
       </div>
       <div class="row justify-content-center my-modal-body">
         <div class="col-10 col-md-6 d-flex flex-column">
-          <label for="product-name">Name</label>
-          <input type="text" id="product-name">
+          <label for="category_name">Category Name</label>
+          <input type="text" id="category_name" name="category_name">
           <div class="input-field">
-            <label for="photos">Photos</label>
-            <div id="photos" class="input-images-2" style="padding-top: .5rem;"></div>
+            <label for="category_icon">Category Icon</label>
+            <div id="category_icon" class="input-images-2" style="padding-top: .5rem;"></div>
           </div>
           <!-- image-uploader plugin -->
           <!-- image-uploader plugin -->
@@ -259,13 +259,52 @@
               maxFiles: 1,
             };
             $('.input-images-2').imageUploader(categories_options);
+            // submit
+            $(document).ready(() => {
+              $('.my-modal-categories').on('submit', function(e) {
+                // prevent default submission
+                e.preventDefault();
+                let formData = new FormData(this);
+                // ajax script to upload category
+                $.ajax({
+                  type: 'post',
+                  url: 'php/upload-categories.php',
+                  data: formData,
+
+                  beforeSend: function() {
+                    $("#categories-btn-add").html("Processing...");
+
+                    // disable button upon submitting data
+                    $("#categories-btn-add").attr('disabled', true);
+
+                    console.log("Processing...");
+                  },
+
+                  complete: function() {
+                    $("#categories-btn-add").html("Add");
+
+                    // enable button again
+                    $("#categories-btn-add").removeAttr('disabled');
+
+                  },
+                  success: function(response) {
+                    $(".my-modal-categories h3").html(response);
+                    console.log("success");
+                  },
+                  cache: false,
+                  contentType: false,
+                  processData: false
+                });
+
+              });
+            })
           </script>
 
         </div>
       </div>
       <div class="row my-modal-footer d-flex flex-row justify-content-center">
         <div class="col-10 col-md-6">
-          <button id="products-btn-add">Add</button>
+          <button id="categories-btn-add">Add</button>
 
         </div>
       </div>

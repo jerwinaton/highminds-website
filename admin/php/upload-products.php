@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $targetDir = "../uploads/";
+    $targetDir = "../uploads/products_images/";
 
     $fileNames = array_filter($_FILES['products_images']['name']);
     foreach ($_FILES['products_images']['name'] as $key => $val) {
