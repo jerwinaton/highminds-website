@@ -84,3 +84,6 @@ section {
     --content-padding: 1rem;
   }
 }
+.brown-link {
+  color: var(--brown);
+}

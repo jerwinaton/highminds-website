@@ -4,7 +4,7 @@
   width: 100vw;
   position: fixed;
   transition: transform 0.2s ease;
-  z-index: 999;
+  z-index: 1000;
   background: var(--dark-gradient);
 }
 .navbar-container {
