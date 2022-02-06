@@ -1,0 +1,20 @@
+/* who we are section */
+.whoWeAre {
+  padding: 40px 0;
+  color: white;
+  position: relative;
+  z-index: 104;
+  background: var(--black);
+}
+#whoWeAreImg {
+  width: 100%;
+}
+/* our products section */
+.ourProducts {
+  padding: 40px 0;
+  color: white;
+  position: relative;
+  background: var(--black);
+  z-index: 105;
+  padding-bottom: 80px;
+}

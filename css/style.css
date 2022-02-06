@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 :root {
   --black: #111111;
   --brown: #c98c57;
@@ -24,7 +27,7 @@
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background: #4d4d4d;
+  background: var(--brown);
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #1f1f1f;
@@ -37,10 +40,15 @@
   font-family: NunitoSans-Regular;
   src: url("../fonts/Nunito_Sans/NunitoSans-Regular.ttf");
 }
-/* add padding to the first section */
-section {
-  padding-top: 80px;
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: NunitoSans-Black, sans-serif;
 }
+
 /* Media Queries */
 /* Standard desktop  */
 

@@ -1,0 +1,36 @@
+/* our shops */
+.shops {
+  position: relative;
+  z-index: 107;
+  background: var(--silver);
+  color: var(--black);
+}
+/* maps */
+.map-container {
+  background: var(--black);
+  color: white;
+  padding: 20px 10px 0px 10px;
+}
+.map-container p {
+  font-size: 1.6rem;
+}
+/* onlineshops */
+.online-shop-container {
+  max-width: 300px;
+}
+.online-shop-container img {
+  border-radius: 10px;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  box-shadow: 0px 0px 10px 4px rgba(77, 77, 77, 0.2);
+  -webkit-box-shadow: 0px 0px 10px 4px rgba(77, 77, 77, 0.2);
+  -moz-box-shadow: 0px 0px 10px 4px rgba(77, 77, 77, 0.2);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.online-shop-container img:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 30px 4px rgba(77, 77, 77, 0.4);
+  -webkit-box-shadow: 0px 0px 30px 4px rgba(77, 77, 77, 0.4);
+  -moz-box-shadow: 0px 0px 30px 4px rgba(77, 77, 77, 0.4);
+}
