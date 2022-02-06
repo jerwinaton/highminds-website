@@ -33,6 +33,7 @@
     ></script>
     <!-- shops location map -->
     <script src="js/location.js"></script>
+    <script src="js/transformNavbar.js"></script>
     <title>HGHMNDS Clothing</title>
   </head>
 
@@ -56,22 +57,6 @@
           >
         </div>
       </nav>
-      <script>
-        $(document).ready(() => {
-          // set navbar bg to transparent on load
-          $(".navbar").css("background", "transparent");
-
-          // change navbar bg when scrolling
-          $(window).scroll(() => {
-            var scroll = $(window).scrollTop();
-            if (scroll > 300) {
-              $(".navbar").css("background", "var(--dark-gradient)");
-            } else {
-              $(".navbar").css("background", "transparent");
-            }
-          });
-        });
-      </script>
     </header>
     <!-- video background -->
     <video
@@ -654,14 +639,17 @@
 
           <!-- online shops -->
           <div class="row justify-content-center mt-5 pb-5">
+            <div class="col-12 col-md-10"><p class="text-center">HGHMNDS Shopping has never been this easy. 
+              <br />Your safety is our priority so shop with us from the comforts of your home.</p></div>
           <div id="shopee-shop"class="online-shop-container col-6">
             <h3 class="text-center">Shopee Shop</h3>
-            <img src="assets/images/shopee-big-logo.png" alt="">
+           <a href="https://shopee.ph/hghmndsonline?smtt=0.0.9" target="_blank"><img src="assets/images/shopee-big-logo.png" alt=""></a> 
         </div>
           <div id="lazada-shop"class="online-shop-container col-6">
             <h3 class="text-center">Lazada Shop</h3>
-            <img src="assets/images/lazada-big-logo.png" alt="">
+           <a href="https://www.lazada.com.ph/shop/hghmnds-online?tab=promotion&path=promotion-32090-0.htm&spm=a2o4l.pdp.seller.1.2bf54fda22QOC2&itemId=431102837&channelSource=pdp"target="_blank"> <img src="assets/images/lazada-big-logo.png" alt=""></a>
         </div>
+      
         </div>
       </div>
       </div>
