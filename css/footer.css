@@ -1,0 +1,15 @@
+footer {
+  padding: 20px;
+  position: relative;
+  z-index: 110;
+  background: var(--black);
+  color: rgb(124, 124, 124);
+}
+.footer-contact-us a {
+  color: rgb(124, 124, 124);
+  font-size: 1.2rem;
+}
+.visit-us > ul > li > ul > li {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
