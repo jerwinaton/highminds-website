@@ -9,6 +9,7 @@
       href="assets/images/highminds-logo.ico"
       type="image/x-icon"
     />
+    <link rel="stylesheet" href="css/pageLoading.css" />
     <link rel="stylesheet" href="bootstrap5/css/bootstrap.min.css" />
     <script src="jquery/jquery3.6.0.min.js"></script>
     <link rel="stylesheet" href="css/reset.css" />
@@ -20,10 +21,10 @@
     <link rel="stylesheet" href="css/shops.css" />
     <link rel="stylesheet" href="css/map.css" />
     <link rel="stylesheet" href="css/footer.css" />
-
+    
 
     <!-- leaflet -->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
       integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -33,13 +34,19 @@
       src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
       integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
       crossorigin=""
-    ></script>
+    ></script> -->
     <!-- shops location map -->
     <script src="js/location.js"></script>
     <script src="js/transformNavbar.js"></script>
     <title>HGHMNDS Clothing</title>
   </head>
-
+ <!-- show loading div while page is not fully loaded -->
+ <div id="pageLoading">
+  <div class="loading-container">
+      <img id="hghmnds-logo" src="assets/images/highminds-logo.png" alt="highminds-logo" />
+      <img id="pageLoading-image" src="assets/images/loading.gif" alt="Loading..." width="100" />
+  </div>
+</div>
   <body>
     <header>
       <nav class="navbar">
@@ -701,6 +708,15 @@
       </div>
       </div>
     </footer>
+        <!-- loading script -->
+        <script>
+          $(window).on('load', function() {
+            $("#pageLoading").fadeOut(400, function() {
+                  // fadeOut complete. Remove the loading div
+                  $("#pageLoading").remove(); //makes page more lightweight 
+              });
+          });
+      </script>
   </body>
   <script src="bootstrap5/js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>

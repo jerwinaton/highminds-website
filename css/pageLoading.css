@@ -1,0 +1,24 @@
+#pageLoading {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  background-color: rgb(0, 0, 0);
+  z-index: 1002;
+}
+.loading-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#hghmnds-logo {
+  width: 150px;
+}
