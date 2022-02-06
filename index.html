@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/map.css" />
     <link rel="stylesheet" href="css/footer.css" />
     
+    
 
     <!-- leaflet -->
     <!-- <link
@@ -36,6 +37,7 @@
       crossorigin=""
     ></script> -->
     <!-- shops location map -->
+    <script src="js/showHide.js"></script>
     <script src="js/location.js"></script>
     <script src="js/transformNavbar.js"></script>
     <title>HGHMNDS Clothing</title>
@@ -98,7 +100,7 @@
     <section class="whoWeAre">
       <div class="container-md">
         <div class="row justify-content-center">
-          <div
+          <div id="whoWeAreDiv1"
             class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center align-items-md-start"
           >
             <h1>Who we are</h1>
@@ -117,7 +119,7 @@
               resellers all over the Philippines.
             </p>
           </div>
-          <div
+          <div id="whoWeAreDiv2"
             class="col-8 col-md-6 d-flex flex-column justify-content-center align-items-center"
           >
             <img
@@ -128,13 +130,16 @@
           </div>
         </div>
       </div>
+      <script>
+       
+      </script>
     </section>
 
     <!-- our products -->
     <section class="ourProducts">
       <div class="container-md">
         <div class="row justify-content-center">
-          <div
+          <div id="ourProductsDiv1"
             class="col-12 col-md-6 order-1 order-md-2 d-flex flex-column justify-content-center align-items-center align-items-md-start"
           >
             <h1>Our Products</h1>
@@ -144,7 +149,7 @@
               and look cool at the same time.
             </p>
           </div>
-          <div
+          <div id="ourProductsDiv2"
             class="col-8 col-md-6 order-2 order-md-1 d-flex flex-column justify-content-center align-items-center"
           >
             <img
@@ -159,7 +164,7 @@
 
     <!-- collections carousel -->
     <section id="collectionsSection" class="collections">
-      <div class="container-md">
+      <div class="container-md" id="collectionsSectionDiv">
         <div class="row justify-content-center">
           <div
             class="col-12 d-flex flex-column justify-content-center align-items-center"
@@ -611,13 +616,13 @@
     <section id="shops" class="shops">
       <div class="container-md">
         <div class="row justify-content-center">
-          <div
+          <div id="shopsDiv1"
             class="col-12 d-flex flex-column justify-content-center align-items-center mb-5"
           >
             <h1 class="mb-2">Our Shops</h1>
             <p>Currently, we have 3 main shops and 2 online shops.</p>
           </div>
-          <div class="map-container col-12 col-md-8 mb-5 pb-5">
+          <div id="shopsDiv2" class="map-container col-12 col-md-8 mb-5 pb-5">
             <h3 class="mb-1 text-center">HGHMNDS Cubao</h1>
             <p class="text-center">
               710 EDSA, Cubao Northbound, Quezon City. *Near BDO NEW YORK,
@@ -626,7 +631,7 @@
             <div id="cubaoMap" class="map"></div>
           </div>
 
-          <div class="map-container col-12 col-md-8 mb-5 pb-5">
+          <div id="shopsDiv3"class="map-container col-12 col-md-8 mb-5 pb-5">
             <h3 class="mb-1 text-center">HGHMNDS Makati</h1>
             <p class="text-center">
               Unit C7, Guadalupe Arcadia Square, JP Rizal Extension, Barangay
@@ -637,7 +642,7 @@
             <div id="makatiMap" class="map"></div>
           </div>
 
-          <div class="map-container col-12 col-md-8 mb-5 pb-5">
+          <div id="shopsDiv4"class="map-container col-12 col-md-8 mb-5 pb-5">
             <h3 class="mb-1 text-center">HGHMNDS Manila</h1>
             <p class="text-center">
               1049 Unit 3C, Arellano Ave. corner Ayala St., Malate, Manila.
@@ -648,7 +653,7 @@
           </div>
 
           <!-- online shops -->
-          <div class="row justify-content-center mt-5 pb-5">
+          <div id="shopsDiv5" class="row justify-content-center mt-5 pb-5">
             <div class="col-12 col-md-10"><p class="text-center">HGHMNDS Shopping has never been this easy. 
               <br />Your safety is our priority so shop with us from the comforts of your home.</p></div>
           <div id="shopee-shop"class="online-shop-container col-6">

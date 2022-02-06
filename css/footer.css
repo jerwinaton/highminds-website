@@ -9,6 +9,9 @@ footer {
   color: rgb(124, 124, 124);
   font-size: 1.2rem;
 }
+.footer-contact-us a:hover {
+  color: rgb(177, 177, 177);
+}
 .visit-us > ul > li > ul > li {
   font-size: 1.1rem;
   margin-bottom: 5px;

@@ -1,7 +1,7 @@
 /* cpollections */
 .collections {
   padding: 40px 0;
-  height: 100vh;
+  height: 600px;
   color: white;
   position: relative;
   background: var(--black);
@@ -55,8 +55,14 @@
     height: 400px;
     object-fit: cover;
   }
+  .collections {
+    height: 600px;
+  }
 }
 @media (max-width: 768px) {
+  .collections {
+    height: 600px;
+  }
   .collections-shopee-link img,
   .collections-lazada-link img {
     height: 50px;

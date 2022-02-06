@@ -4,6 +4,7 @@
   z-index: 107;
   background: var(--silver);
   color: var(--black);
+  padding-top: 50px;
 }
 /* maps */
 .map-container {
