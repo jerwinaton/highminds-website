@@ -40,15 +40,28 @@ html {
   font-family: NunitoSans-Regular;
   src: url("../fonts/Nunito_Sans/NunitoSans-Regular.ttf");
 }
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: NunitoSans-Black, sans-serif;
+#scrollUpBtn {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  background: var(--brown);
+  border: 0;
+  box-shadow: 0px 0px 10px 3px rgb(64, 66, 65, 0.5);
+  bottom: 10%;
+  padding: 2px 5px 5px 5px;
+  right: 5%;
+  transform: translate(-50%-50%);
+  z-index: 150;
+  cursor: pointer;
 }
-
+#scrollUpBtn:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 10px 4px rgba(48, 48, 48, 0.5);
+}
+#scrollUpBtn img {
+  width: 100%;
+}
 /* Media Queries */
 /* Standard desktop  */
 
@@ -90,6 +103,11 @@ h5 {
   :root {
     font-size: 7px;
     --content-padding: 1rem;
+  }
+  #scrollUpBtn {
+    padding: 3px 3px 0px 3px;
+    width: 30px;
+    height: 30px;
   }
 }
 .brown-link {

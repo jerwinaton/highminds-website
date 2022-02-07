@@ -15,7 +15,6 @@ $(document).ready(() => {
   // fade elements on scroll
   $(window).scroll(() => {
     scroll = $(window).scrollTop();
-    console.log($(window).width());
     screenWidth = $(window).width();
     if (screenWidth > 1500) {
       // who we are section
