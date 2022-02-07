@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="assets/images/highminds-logo.ico" type="image/x-icon" />
+  <title>HGHMNDS CLOTHING</title>
+
   <link rel="stylesheet" href="css/pageLoading.css" />
   <link rel="stylesheet" href="bootstrap5/css/bootstrap.min.css" />
   <script src="jquery/jquery3.6.0.min.js"></script>
@@ -18,6 +20,7 @@
   <link rel="stylesheet" href="css/shops.css" />
   <link rel="stylesheet" href="css/map.css" />
   <link rel="stylesheet" href="css/footer.css" />
+
   <!-- smooth scroll effect -->
   <script src="js/smooth-scroll.js"></script>
 
@@ -28,12 +31,15 @@
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
-  <!-- shops location map -->
-  <script src="js/showHide.js"></script>
+
+    <script src="js/showHide.js"></script>
+    <!-- shops location map -->
   <script src="js/location.js"></script>
   <script src="js/transformNavbar.js"></script>
-  <title>HGHMNDS CLOTHING</title>
+  <script src="js/hide-navbar-onscroll.js"></script>
+ 
 </head>
+
 <!-- show loading div while page is not fully loaded -->
 <div id="pageLoading">
   <div class="loading-container">
@@ -46,13 +52,15 @@
   <header>
     <nav class="navbar">
       <div class="navbar-container">
-        <a href="#"><img src="assets/images/highminds-logo.png" alt="highminds-logoPNG" />HGHMNDS</a>
+        <a href="index.html"><img src="assets/images/highminds-logo.png" alt="highminds-logoPNG" />HGHMNDS</a>
         <a href="https://shopee.ph/hghmndsonline?smtt=0.0.9" target="_blank">Shopee Link</a>
         <a href="https://www.lazada.com.ph/shop/hghmnds-online?tab=promotion&path=promotion-32090-0.htm&spm=a2o4l.pdp.seller.1.2bf54fda22QOC2&itemId=431102837&channelSource=pdp"
           target="_blank">Lazada Link</a>
       </div>
     </nav>
   </header>
+  <audio src="assets/audios/collection-main-video-hd.mp3" type="audio/mpeg" autoplay>
+  </audio>
   <!-- video background -->
   <video autoplay muted loop poster="assets/images/highminds-poster.png" id="bg-video"
     src="assets/videos/collection-main-video-hd.mp4"></video>
@@ -173,7 +181,7 @@
                 <div class="carousel-caption d-flex flex-row justify-content-center">
                   <a class="collections-shopee-link me-1"
                     href="https://shopee.ph/shop/507737714/search/?shopCollection=142086283" target="_blank"><img
-                      src="assets/images/shopee-logo.png" alt="shopee logo" /></a>
+                      src="assets/images/shopee-logo.jpg" alt="shopee logo" /></a>
                   <a class="collections-lazada-link ms-1"
                     href="https://www.lazada.com.ph/hghmnds-online/?spm=a2o4l.storeSpmB.0.0.2ae33bcfexo26O&q=All-Products&shop_category_ids=974700&from=wangpu&sc=KVUG"
                     target="_blank"><img src="assets/images/lazada-logo.jpg" alt="lazada logo" /></a>
@@ -184,7 +192,7 @@
                 <div class="carousel-caption d-flex flex-row justify-content-center">
                   <a class="collections-shopee-link"
                     href="https://shopee.ph/shop/507737714/search/?page=0&shopCollection=139275631" target="_blank"><img
-                      src="assets/images/shopee-logo.png" alt="shopee logo" /></a>
+                      src="assets/images/shopee-logo.jpg" alt="shopee logo" /></a>
                 </div>
               </div>
               <div class="carousel-item">
@@ -192,7 +200,7 @@
                 <div class="carousel-caption d-flex flex-row justify-content-center">
                   <a class="collections-shopee-link"
                     href="https://shopee.ph/shop/507737714/search/?page=0&shopCollection=139275641" target="_blank"><img
-                      src="assets/images/shopee-logo.png" alt="shopee logo" /></a>
+                      src="assets/images/shopee-logo.jpg" alt="shopee logo" /></a>
                 </div>
               </div>
               <div class="carousel-item">
@@ -200,7 +208,7 @@
                 <div class="carousel-caption d-flex flex-row justify-content-center">
                   <a class="collections-shopee-link me-1"
                     href="https://shopee.ph/shop/507737714/search/?page=0&shopCollection=135480717" target="_blank"><img
-                      src="assets/images/shopee-logo.png" alt="shopee logo" /></a>
+                      src="assets/images/shopee-logo.jpg" alt="shopee logo" /></a>
                   <a class="collections-lazada-link ms-1"
                     href="https://www.lazada.com.ph/hghmnds-online/?spm=a2o4l.storeSpmB.0.0.2ae33bcfexo26O&q=All-Products&shop_category_ids=939766&from=wangpu&sc=KVUG"
                     target="_blank"><img src="assets/images/lazada-logo.jpg" alt="lazada logo" /></a>
@@ -211,7 +219,7 @@
                 <div class="carousel-caption d-flex flex-row justify-content-center">
                   <a class="collections-shopee-link me-1 ms-1"
                     href="https://shopee.ph/shop/507737714/search/?page=0&shopCollection=133352650" target="_blank"><img
-                      src="assets/images/shopee-logo.png" alt="shopee logo" /></a>
+                      src="assets/images/shopee-logo.jpg" alt="shopee logo" /></a>
                   <a class="collections-lazada-link me-1 ms-1"
                     href="https://www.lazada.com.ph/hghmnds-online/?spm=a2o4l.storeSpmB.0.0.2ae33bcfexo26O&q=All-Products&shop_category_ids=922887&from=wangpu&sc=KVUG"
                     target="_blank"><img src="assets/images/lazada-logo.jpg" alt="lazada logo" /></a>
@@ -222,7 +230,7 @@
                 <div class="carousel-caption d-flex flex-row justify-content-center">
                   <a class="collections-shopee-link me-1 ms-1"
                     href="https://shopee.ph/shop/507737714/search/?page=0&shopCollection=129626206" target="_blank"><img
-                      src="assets/images/shopee-logo.png" alt="shopee logo" /></a>
+                      src="assets/images/shopee-logo.jpg" alt="shopee logo" /></a>
                   <a class="collections-lazada-link me-1 ms-1"
                     href="https://www.lazada.com.ph/hghmnds-online/?spm=a2o4l.storeSpmB.0.0.2ae33bcfexo26O&q=All-Products&shop_category_ids=922906&from=wangpu&sc=KVUG"
                     target="_blank"><img src="assets/images/lazada-logo.jpg" alt="lazada logo" /></a>
@@ -233,7 +241,7 @@
                 <div class="carousel-caption d-flex flex-row justify-content-center">
                   <a class="collections-shopee-link me-1 ms-1"
                     href="https://shopee.ph/shop/507737714/search/?page=0&shopCollection=130003305" target="_blank"><img
-                      src="assets/images/shopee-logo.png" alt="shopee logo" /></a>
+                      src="assets/images/shopee-logo.jpg" alt="shopee logo" /></a>
                   <a class="collections-lazada-link me-1 ms-1"
                     href="https://www.lazada.com.ph/hghmnds-online/?spm=a2o4l.storeSpmB.0.0.2ae33bcfexo26O&q=All-Products&shop_category_ids=922943&from=wangpu&sc=KVUG"
                     target="_blank"><img src="assets/images/lazada-logo.jpg" alt="lazada logo" /></a>
@@ -467,7 +475,6 @@
   </script>
 </body>
 <script src="bootstrap5/js/bootstrap.bundle.min.js"></script>
-<script src="js/script.js"></script>
-<script src="js/hide-navbar-onscroll.js"></script>
+
 
 </html>

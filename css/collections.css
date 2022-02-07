@@ -15,9 +15,8 @@
 .collections-shopee-link img,
 .collections-lazada-link img {
   transition: transform 0.2s ease-in-out;
-  border-radius: 50%;
+  border-radius: 5px;
   height: 60px;
-  animation: border-shadow 1s infinite;
 }
 .collections-shopee-link img:hover,
 .collections-lazada-link img:hover {
@@ -26,22 +25,9 @@
 .carousel-item {
   transition: transform 0.6s ease-in-out;
 }
-@keyframes border-shadow {
-  0% {
-    box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.75);
-    -webkit-box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 72, 0.75);
-    -moz-box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.75);
-  }
-  50% {
-    box-shadow: 0px 0px 10px 3px rgba(255, 255, 255, 0.75);
-    -webkit-box-shadow: 0px 0px 10px 3px rgba(255, 255, 255, 0.75);
-    -moz-box-shadow: 0px 0px 10px 3px rgba(255, 255, 255, 0.75);
-  }
-  100% {
-    box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.75);
-    -webkit-box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 72, 0.75);
-    -moz-box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.75);
-  }
+.caption-buttons {
+  padding: 5px 20px;
+  border-radius: 4px;
 }
 /* media querires */
 @media (max-width: 1400px) {
