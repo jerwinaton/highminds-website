@@ -15,7 +15,6 @@
 .collections-shopee-link img,
 .collections-lazada-link img {
   transition: transform 0.2s ease-in-out;
-  border: 1px solid white;
   border-radius: 50%;
   height: 60px;
   animation: border-shadow 1s infinite;
