@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/navbar.css" />
   <link rel="stylesheet" href="css/showcase.css" />
+  <link rel="stylesheet" href="css/latest.css" />
   <link rel="stylesheet" href="css/whoWeAre-ourProducts.css" />
   <link rel="stylesheet" href="css/collections.css" />
   <link rel="stylesheet" href="css/shops.css" />
@@ -37,18 +38,20 @@
   <script src="js/location.js"></script>
   <script src="js/transformNavbar.js"></script>
   <script src="js/hide-navbar-onscroll.js"></script>
+  <script src="js/populate-products.js"></script>
  
 </head>
 
-<!-- show loading div while page is not fully loaded -->
-<div id="pageLoading">
-  <div class="loading-container">
-    <img id="hghmnds-logo" src="assets/images/highminds-logo.png" alt="highminds-logo" />
-    <img id="pageLoading-image" src="assets/images/loading.gif" alt="Loading..." width="100" />
-  </div>
-</div>
 
 <body>
+  
+  <!-- show loading div while page is not fully loaded -->
+  <div id="pageLoading">
+    <div class="loading-container">
+      <img id="hghmnds-logo" src="assets/images/highminds-logo.png" alt="highminds-logo" />
+      <img id="pageLoading-image" src="assets/images/loading.gif" alt="Loading..." width="100" />
+    </div>
+  </div>
   <header>
     <nav class="navbar">
       <div class="navbar-container">
@@ -76,8 +79,8 @@
 <div class="d-flex flex-column"></div>
 <p class="mb-0">Shop now!</p>
     <div class="shopee-lazada-links d-flex flex-row">
-      <a href="#" id="shopOnShopee">Shopee</a>
-      <a href="#" id="shopOnLazada">Lazada</a>
+      <a href="https://shopee.ph/hghmndsonline" id="shopOnShopee" target="_blank">Shopee</a>
+      <a href="https://www.lazada.com.ph/shop/hghmnds-online" id="shopOnLazada" target="_blank">Lazada</a>
     </div>
 
     <div class="scroll-down d-flex flex-column align-items-center mt-5">
@@ -85,11 +88,51 @@
       <img src="assets/images/scrolldown.gif" width="50" alt="" />
     </div>
   </section>
+<section class="latest">
+  <div class="container-md">
+      <h1 class="text-center py-5">OWN THE THRONE LATEST COLLECTION</h1>
+    <div class="row justify-content-center gx-5">
+     <!-- to be populated by populate-products.js and sample array of objects 'products'-->
+    </div>
+    
+    <script>
+      // script to show / hide shopee and laza button
+      // in products
+      $(document).ready(()=>{
+        // hide the buttons
+        $(".latest-pro-card-links").hide();
 
+        // show buttons
+      $(".latest-pro-card").on("click",(obj)=>{
+        
+        $(".latest-pro-card-links").hide();
+        if(obj.target.className == "latest-pro-card-links"){
+          $(obj.target).fadeOut("fast");
+          console.log($(obj.target));
+        }
+        else{
+          $(obj.currentTarget).find($(".latest-pro-card-links")).fadeIn("fast");
+        }
+      });
+      // open new page using the link in the 
+      // data-link attribute of the button clicked
+      $(".latestProShopee").on("click",(obj)=>{
+          let link = $(obj.target).attr("data-link");
+          window.open(link);
+      })
+      $(".latestProLazada").on("click",(obj)=>{
+          let link = $(obj.target).attr("data-link");
+          window.open(link);
+
+      })
+      });
+    </script>
+  </div>
+</section>
   <!-- welcome -->
   <section class="whoWeAre">
     <div class="container-md">
-      <div class="row justify-content-center">
+      <div class="row row-eq-height justify-content-center">
         <div id="whoWeAreDiv1"
           class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center align-items-md-start">
           <h1>About Us</h1>
@@ -322,6 +365,7 @@
       $(document).ready(() => {
         $(".carousel").carousel({
           interval: 4000,
+          pause:"false"
         });
       });
     </script>

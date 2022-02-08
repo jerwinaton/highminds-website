@@ -16,205 +16,206 @@ $(document).ready(() => {
   $(window).scroll(() => {
     scroll = $(window).scrollTop();
     screenWidth = $(window).width();
+    console.log(scroll, screenWidth);
     if (screenWidth > 1500) {
       // who we are section
-      if (scroll <= 300) {
+      if (scroll <= 2600) {
         $("#whoWeAreDiv1").css("opacity", "0");
         $("#whoWeAreDiv2").css("opacity", "0");
-      } else if (scroll > 300) {
+      } else if (scroll > 2600) {
         $("#whoWeAreDiv1").css("opacity", "100");
         $("#whoWeAreDiv2").css("opacity", "100");
       }
       // our products section
-      if (scroll <= 800) {
+      if (scroll <= 3400) {
         $("#ourProductsDiv1").css("opacity", "0");
         $("#ourProductsDiv2").css("opacity", "0");
-      } else if (scroll > 800) {
+      } else if (scroll > 3400) {
         $("#ourProductsDiv1").css("opacity", "100");
         $("#ourProductsDiv2").css("opacity", "100");
       }
       // collections section
-      if (scroll <= 1300) {
+      if (scroll <= 4000) {
         $("#collectionsSectionDiv").css("opacity", "0");
-      } else if (scroll > 1300) {
+      } else if (scroll > 4000) {
         $("#collectionsSectionDiv").css("opacity", "100");
       }
       // shops section
-      if (scroll <= 2000) {
+      if (scroll <= 4300) {
         $("#shopsDiv1").css("opacity", "0");
-      } else if (scroll > 2000) {
+      } else if (scroll > 4300) {
         $("#shopsDiv1").css("opacity", "100");
       }
-      if (scroll <= 2200) {
+      if (scroll <= 4800) {
         $("#shopsDiv2").css("opacity", "0");
-      } else if (scroll > 2200) {
+      } else if (scroll > 4800) {
         $("#shopsDiv2").css("opacity", "100");
       }
-      if (scroll <= 2800) {
+      if (scroll <= 5400) {
         $("#shopsDiv3").css("opacity", "0");
-      } else if (scroll > 2800) {
+      } else if (scroll > 5400) {
         $("#shopsDiv3").css("opacity", "100");
       }
-      if (scroll <= 3450) {
+      if (scroll <= 6100) {
         $("#shopsDiv4").css("opacity", "0");
-      } else if (scroll > 3450) {
+      } else if (scroll > 6100) {
         $("#shopsDiv4").css("opacity", "100");
       }
-      if (scroll <= 4000) {
+      if (scroll <= 6700) {
         $("#shopsDiv5").css("opacity", "0");
-      } else if (scroll > 4000) {
+      } else if (scroll > 6700) {
         $("#shopsDiv5").css("opacity", "100");
       }
     }
 
     if (screenWidth <= 1500 && screenWidth > 1100) {
       // who we are section
-      if (scroll <= 300) {
+      if (scroll <= 1800) {
         $("#whoWeAreDiv1").css("opacity", "0");
         $("#whoWeAreDiv2").css("opacity", "0");
-      } else if (scroll > 300) {
+      } else if (scroll > 1800) {
         $("#whoWeAreDiv1").css("opacity", "100");
         $("#whoWeAreDiv2").css("opacity", "100");
       }
       // our products section
-      if (scroll <= 800) {
+      if (scroll <= 2500) {
         $("#ourProductsDiv1").css("opacity", "0");
         $("#ourProductsDiv2").css("opacity", "0");
-      } else if (scroll > 800) {
+      } else if (scroll > 2500) {
         $("#ourProductsDiv1").css("opacity", "100");
         $("#ourProductsDiv2").css("opacity", "100");
       }
       // collections section
-      if (scroll <= 1300) {
+      if (scroll <= 3100) {
         $("#collectionsSectionDiv").css("opacity", "0");
-      } else if (scroll > 1300) {
+      } else if (scroll > 3100) {
         $("#collectionsSectionDiv").css("opacity", "100");
       }
       // shops section
-      if (scroll <= 1700) {
+      if (scroll <= 3500) {
         $("#shopsDiv1").css("opacity", "0");
-      } else if (scroll > 1700) {
+      } else if (scroll > 3500) {
         $("#shopsDiv1").css("opacity", "100");
       }
-      if (scroll <= 2000) {
+      if (scroll <= 3800) {
         $("#shopsDiv2").css("opacity", "0");
-      } else if (scroll > 2000) {
+      } else if (scroll > 3800) {
         $("#shopsDiv2").css("opacity", "100");
       }
-      if (scroll <= 2600) {
+      if (scroll <= 4500) {
         $("#shopsDiv3").css("opacity", "0");
-      } else if (scroll > 2600) {
+      } else if (scroll > 4500) {
         $("#shopsDiv3").css("opacity", "100");
       }
-      if (scroll <= 3400) {
+      if (scroll <= 5100) {
         $("#shopsDiv4").css("opacity", "0");
-      } else if (scroll > 3400) {
+      } else if (scroll > 5100) {
         $("#shopsDiv4").css("opacity", "100");
       }
-      if (scroll <= 4000) {
+      if (scroll <= 5600) {
         $("#shopsDiv5").css("opacity", "0");
-      } else if (scroll > 4000) {
+      } else if (scroll > 5600) {
         $("#shopsDiv5").css("opacity", "100");
       }
     }
 
     if (screenWidth <= 1100 && screenWidth > 768) {
       // who we are section
-      if (scroll <= 300) {
+      if (scroll <= 3200) {
         $("#whoWeAreDiv1").css("opacity", "0");
         $("#whoWeAreDiv2").css("opacity", "0");
-      } else if (scroll > 300) {
+      } else if (scroll > 3200) {
         $("#whoWeAreDiv1").css("opacity", "100");
         $("#whoWeAreDiv2").css("opacity", "100");
       }
       // our products section
-      if (scroll <= 800) {
+      if (scroll <= 3700) {
         $("#ourProductsDiv1").css("opacity", "0");
         $("#ourProductsDiv2").css("opacity", "0");
-      } else if (scroll > 800) {
+      } else if (scroll > 3700) {
         $("#ourProductsDiv1").css("opacity", "100");
         $("#ourProductsDiv2").css("opacity", "100");
       }
       // collections section
-      if (scroll <= 1100) {
+      if (scroll <= 4100) {
         $("#collectionsSectionDiv").css("opacity", "0");
-      } else if (scroll > 1100) {
+      } else if (scroll > 4100) {
         $("#collectionsSectionDiv").css("opacity", "100");
       }
       // shops section
-      if (scroll <= 1500) {
+      if (scroll <= 4500) {
         $("#shopsDiv1").css("opacity", "0");
-      } else if (scroll > 1500) {
+      } else if (scroll > 4500) {
         $("#shopsDiv1").css("opacity", "100");
       }
-      if (scroll <= 1700) {
+      if (scroll <= 4900) {
         $("#shopsDiv2").css("opacity", "0");
-      } else if (scroll > 1700) {
+      } else if (scroll > 4900) {
         $("#shopsDiv2").css("opacity", "100");
       }
-      if (scroll <= 2300) {
+      if (scroll <= 5600) {
         $("#shopsDiv3").css("opacity", "0");
-      } else if (scroll > 2300) {
+      } else if (scroll > 5600) {
         $("#shopsDiv3").css("opacity", "100");
       }
-      if (scroll <= 3100) {
+      if (scroll <= 6400) {
         $("#shopsDiv4").css("opacity", "0");
-      } else if (scroll > 3100) {
+      } else if (scroll > 6400) {
         $("#shopsDiv4").css("opacity", "100");
       }
-      if (scroll <= 3800) {
+      if (scroll <= 7000) {
         $("#shopsDiv5").css("opacity", "0");
-      } else if (scroll > 3800) {
+      } else if (scroll > 7000) {
         $("#shopsDiv5").css("opacity", "100");
       }
     }
     if (screenWidth <= 768) {
       // who we are section
-      if (scroll <= 300) {
+      if (scroll <= 2600) {
         $("#whoWeAreDiv1").css("opacity", "0");
         $("#whoWeAreDiv2").css("opacity", "0");
-      } else if (scroll > 300) {
+      } else if (scroll > 2600) {
         $("#whoWeAreDiv1").css("opacity", "100");
         $("#whoWeAreDiv2").css("opacity", "100");
       }
       // our products section
-      if (scroll <= 800) {
+      if (scroll <= 3300) {
         $("#ourProductsDiv1").css("opacity", "0");
         $("#ourProductsDiv2").css("opacity", "0");
-      } else if (scroll > 800) {
+      } else if (scroll > 3300) {
         $("#ourProductsDiv1").css("opacity", "100");
         $("#ourProductsDiv2").css("opacity", "100");
       }
       // collections section
-      if (scroll <= 1100) {
+      if (scroll <= 3800) {
         $("#collectionsSectionDiv").css("opacity", "0");
-      } else if (scroll > 1100) {
+      } else if (scroll > 3800) {
         $("#collectionsSectionDiv").css("opacity", "100");
       }
       // shops section
-      if (scroll <= 1500) {
+      if (scroll <= 4300) {
         $("#shopsDiv1").css("opacity", "0");
-      } else if (scroll > 1500) {
+      } else if (scroll > 4300) {
         $("#shopsDiv1").css("opacity", "100");
       }
-      if (scroll <= 1700) {
+      if (scroll <= 4600) {
         $("#shopsDiv2").css("opacity", "0");
-      } else if (scroll > 1700) {
+      } else if (scroll > 4600) {
         $("#shopsDiv2").css("opacity", "100");
       }
-      if (scroll <= 2300) {
+      if (scroll <= 5100) {
         $("#shopsDiv3").css("opacity", "0");
-      } else if (scroll > 2300) {
+      } else if (scroll > 5100) {
         $("#shopsDiv3").css("opacity", "100");
       }
-      if (scroll <= 2700) {
+      if (scroll <= 5600) {
         $("#shopsDiv4").css("opacity", "0");
-      } else if (scroll > 2700) {
+      } else if (scroll > 5600) {
         $("#shopsDiv4").css("opacity", "100");
       }
-      if (scroll <= 3200) {
+      if (scroll <= 5900) {
         $("#shopsDiv5").css("opacity", "0");
-      } else if (scroll > 3200) {
+      } else if (scroll > 5900) {
         $("#shopsDiv5").css("opacity", "100");
       }
     }
