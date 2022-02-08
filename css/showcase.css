@@ -35,17 +35,28 @@
   letter-spacing: 3px;
   text-shadow: 0px 0px 1px rgb(0, 0, 0, 0.9);
 }
-.showcase #gotoCollectionsbtn {
-  color: white;
-  background: rgb(201, 140, 87);
-  border: 1px solid var(--brown);
+.showcase .shopee-lazada-links {
   font-family: Nunito, sans-serif;
-  padding: 5px 50px;
+}
+.showcase .shopee-lazada-links #shopOnShopee,
+.showcase .shopee-lazada-links #shopOnLazada {
+  padding: 5px 25px;
+  color: white;
   transition: background 0.1s ease-out;
 }
-.showcase #gotoCollectionsbtn:hover {
-  background: rgb(151, 104, 63);
+.showcase .shopee-lazada-links #shopOnShopee {
+  background: #ff5622;
 }
+.showcase .shopee-lazada-links #shopOnShopee:hover {
+  background: #eb4b1b;
+}
+.showcase .shopee-lazada-links #shopOnLazada {
+  background: #0302c0;
+}
+.showcase .shopee-lazada-links #shopOnLazada:hover {
+  background: #0000ac;
+}
+
 /* scroll down gif */
 .scroll-down {
   position: absolute;
